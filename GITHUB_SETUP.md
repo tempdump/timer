@@ -2,11 +2,11 @@
 
 ## Repository Description
 ```
-Professional timer & clock app with multiple visual themes, bilingual support (Swedish/English), and customizable display options. Live demo: mackan.se/timer
+Professional timer & clock app with multiple visual themes, bilingual support (Swedish/English), and customizable display options. Live demo: mackan.eu/timer
 ```
 
 ## About Section
-- **Website**: https://mackan.se/timer
+- **Website**: https://mackan.eu/timer
 - **Topics/Tags**: 
   ```
   timer, clock, javascript, html5, themes, bilingual, stabsövning, totalförsvar, krishantering, säkerhet, emergency-management, civil-defense, crisis-management, productivity, training, presentation-tools
@@ -14,7 +14,7 @@ Professional timer & clock app with multiple visual themes, bilingual support (S
 
 ## Social Preview
 - **Title**: Professional Timer & Clock Application
-- **Description**: Live demo at mackan.se/timer - Perfect for presentations, staff exercises, crisis management, and emergency preparedness
+- **Description**: Live demo at mackan.eu/timer - Perfect for presentations, staff exercises, crisis management, and emergency preparedness
 - **Image**: Consider adding a screenshot of the split-flap or LED display
 
 ## Repository Settings
@@ -25,7 +25,7 @@ Professional timer & clock app with multiple visual themes, bilingual support (S
 - ✅ **Projects disabled**
 
 ## README Highlights
-- 🚀 **Live Demo**: Prominent links to mackan.se/timer
+- 🚀 **Live Demo**: Prominent links to mackan.eu/timer
 - 🎯 **Use Cases**: Includes stabsövningar, totalförsvar, krishantering
 - 📱 **Responsive**: Works on desktop and mobile
 - 🌐 **Bilingual**: Swedish and English interface
@@ -43,5 +43,5 @@ You could also enable GitHub Pages to serve the app directly from:
 `https://tempdump.github.io/timer`
 
 This would give you two live versions:
-- Primary: mackan.se/timer (your domain)
+- Primary: mackan.eu/timer (your domain)
 - Backup: tempdump.github.io/timer (GitHub Pages)
