@@ -993,6 +993,36 @@ label:has(#show-date), label:has(#show-weekday) {
     font-size: 0.85rem;
 }
 
+.github-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.github-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    transition: all 0.2s ease;
+}
+
+.github-link a:hover {
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.github-icon {
+    font-size: 1rem;
+}
+
 /* New Features Styles */
 
 /* Exercise Title */
