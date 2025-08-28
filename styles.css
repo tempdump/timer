@@ -1231,9 +1231,57 @@ label:has(#show-date), label:has(#show-weekday) {
     transform-origin: center center;
 }
 
-/* Prevent UI elements from being too small at reduced sizes */
+/* Mobile responsive adjustments */
 @media screen and (max-width: 768px) {
     #display-content {
         min-width: 300px;
+        padding: 10px;
+    }
+    
+    /* Prevent timer/clock text from wrapping */
+    .timer-display,
+    .clock-display {
+        white-space: nowrap;
+        font-size: clamp(2rem, 8vw, 4rem);
+    }
+    
+    #timer-time,
+    #clock-time {
+        font-size: clamp(2rem, 8vw, 4rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Adjust exercise title for mobile */
+    .exercise-title-display {
+        font-size: 1.2rem !important;
+        padding: 0 10px 10px 10px !important;
+    }
+    
+    /* Adjust pause indicator for mobile */
+    .pause-symbol {
+        font-size: 4rem !important;
+    }
+    
+    .pause-message {
+        font-size: 1.5rem !important;
+        padding: 10px 15px !important;
+    }
+    
+    /* Theme-specific mobile adjustments */
+    .preview-theme-digital-retro .preview-time,
+    .preview-theme-tactical .preview-time,
+    .preview-theme-nixie .preview-time,
+    .preview-theme-lcd .preview-time {
+        font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+        padding: 10px 15px !important;
+        white-space: nowrap;
+    }
+    
+    /* Analog clock mobile adjustment */
+    .preview-analog svg {
+        max-width: 90vw;
+        max-height: 90vw;
     }
 }

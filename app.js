@@ -181,7 +181,16 @@ class App {
         });
 
         this.timer.onUpdate = (time) => {
-            document.getElementById('timer-time').textContent = time.formatted;
+            const timerElement = document.getElementById('timer-time');
+            const timerDisplay = document.getElementById('timer-display');
+            
+            timerElement.textContent = time.formatted;
+            
+            // Set data attribute for LCD background pattern
+            if (timerDisplay) {
+                timerDisplay.setAttribute('data-hide-hours', time.hideHours ? 'true' : 'false');
+            }
+            
             if (themeManager.currentTheme === 'analog-station') {
                 themeManager.updateAnalogClock(time);
             } else if (themeManager.currentTheme === 'split-flap') {

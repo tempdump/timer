@@ -206,6 +206,15 @@ class ThemeManager {
             .theme-tactical .clock-date {
                 color: #ff6600 !important;
             }
+            
+            /* Mobile responsive adjustments for Tactical */
+            @media (max-width: 768px) {
+                .theme-tactical .timer-display,
+                .theme-tactical .clock-display {
+                    font-size: clamp(2rem, 8vw, 4rem) !important;
+                    letter-spacing: 0.1em !important;
+                }
+            }
         `;
         document.head.appendChild(style);
     }
@@ -259,7 +268,24 @@ class ThemeManager {
             .theme-lcd .clock-date {
                 color: #1a2a1a !important;
             }
-            .theme-lcd .timer-display::before,
+            .theme-lcd .timer-display::before {
+                content: '88:88:88';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000 !important;
+                opacity: 0.15;
+                z-index: 0;
+                font-family: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+            }
             .theme-lcd .clock-display::before {
                 content: '88:88:88';
                 position: absolute;
@@ -278,10 +304,22 @@ class ThemeManager {
                 font-weight: inherit;
                 letter-spacing: inherit;
             }
+            /* Dynamic background pattern for timer without hours */
+            .theme-lcd .timer-display[data-hide-hours="true"]::before {
+                content: '88:88';
+            }
             .theme-lcd .timer-display > *,
             .theme-lcd .clock-display > * {
                 position: relative;
                 z-index: 1;
+            }
+            
+            /* Mobile responsive adjustments for LCD */
+            @media (max-width: 768px) {
+                .theme-lcd .timer-display,
+                .theme-lcd .clock-display {
+                    font-size: clamp(2rem, 8vw, 4rem) !important;
+                }
             }
         `;
         document.head.appendChild(style);
