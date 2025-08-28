@@ -1,5 +1,10 @@
 # Professional Timer & Clock Application
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-mackan.se/timer-blue?style=for-the-badge)](https://mackan.se/timer)
+[![GitHub](https://img.shields.io/badge/📂_Source_Code-GitHub-black?style=for-the-badge)](https://github.com/tempdump/timer)
+
+**🌐 [Try the Live Demo at mackan.se/timer →](https://mackan.se/timer)**
+
 [🇸🇪 **Svenska**](#svenska) | [🇬🇧 **English**](#english)
 
 ---
@@ -7,6 +12,8 @@
 ## English
 
 A modern, professional timer and clock application with multiple visual themes and comprehensive customization options. Perfect for presentations, workouts, meetings, training exercises, emergency preparedness, crisis management, and any scenario requiring precise time management and operational robustness.
+
+> **🎯 Ready to use?** [**Try the live demo at mackan.se/timer**](https://mackan.se/timer) - No installation required!
 
 ### ✨ Features
 
@@ -45,6 +52,12 @@ A modern, professional timer and clock application with multiple visual themes a
 
 ### 🚀 Quick Start
 
+**Option 1: Try Online (Recommended)**
+1. **Visit**: [mackan.se/timer](https://mackan.se/timer) 
+2. **Configure**: Set your desired time and theme
+3. **Start**: Click "Start in Fullscreen" or press F11
+
+**Option 2: Run Locally**
 1. **Download**: Get the latest release or clone this repository
 2. **Open**: Launch `index.html` in any modern web browser
 3. **Configure**: Set your desired time and theme
@@ -113,6 +126,8 @@ Open source - feel free to use, modify, and distribute.
 
 En modern, professionell timer- och klockapplikation med flera visuella teman och omfattande anpassningsmöjligheter. Perfekt för presentationer, träning, möten, stabsövningar, totalförsvarsövningar, krishantering, säkerhetsoperationer och alla scenarier som kräver exakt tidshantering och operativ robusthet.
 
+> **🎯 Redo att använda?** [**Prova live-demon på mackan.se/timer**](https://mackan.se/timer) - Ingen installation krävs!
+
 ### ✨ Funktioner
 
 #### **Visuella Teman**
@@ -150,6 +165,12 @@ En modern, professionell timer- och klockapplikation med flera visuella teman oc
 
 ### 🚀 Snabbstart
 
+**Alternativ 1: Prova Online (Rekommenderas)**
+1. **Besök**: [mackan.se/timer](https://mackan.se/timer) 
+2. **Konfigurera**: Ställ in önskad tid och tema  
+3. **Starta**: Klicka "Starta i fullskärm" eller tryck F11
+
+**Alternativ 2: Kör Lokalt**
 1. **Ladda ned**: Hämta senaste versionen eller klona detta repository
 2. **Öppna**: Starta `index.html` i valfri modern webbläsare
 3. **Konfigurera**: Ställ in önskad tid och tema
