@@ -195,7 +195,7 @@
     }
 
     function addAutoScaling() {
-        // Auto-scale display based on text length
+        // Auto-scale display based on text length and available space
         const observer = new MutationObserver(() => {
             const timerDisplay = document.getElementById('timer-time');
             const clockDisplay = document.getElementById('clock-time');
@@ -205,16 +205,26 @@
 
             const textLength = display.textContent.length;
 
+            // Check if exercise title is visible (takes ~8vh)
+            const exerciseTitle = document.querySelector('.exercise-title-display');
+            const hasTitle = exerciseTitle && !exerciseTitle.classList.contains('hidden');
+
+            // Adjust max height based on available space
+            const maxHeight = hasTitle ? '40vh' : '45vh';
+            const maxWidth = '35vw';
+
             // Adjust font size based on content length
             if (textLength <= 8) {
                 // 00:00:00
-                display.style.fontSize = 'min(50vh, 40vw)';
+                display.style.fontSize = `min(${maxHeight}, ${maxWidth})`;
             } else if (textLength <= 10) {
                 // 00:00:00.0
-                display.style.fontSize = 'min(45vh, 35vw)';
+                const reducedHeight = hasTitle ? '35vh' : '40vh';
+                display.style.fontSize = `min(${reducedHeight}, 30vw)`;
             } else {
                 // Longer strings
-                display.style.fontSize = 'min(35vh, 28vw)';
+                const reducedHeight = hasTitle ? '30vh' : '35vh';
+                display.style.fontSize = `min(${reducedHeight}, 25vw)`;
             }
         });
 
