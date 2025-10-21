@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1a1a1a"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#00ff00" stroke-width="20"/>
+
+  <!-- Clock hands -->
+  <line x1="256" y1="256" x2="256" y2="120" stroke="#00ff00" stroke-width="15" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="340" y2="256" stroke="#00ff00" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Center dot -->
+  <circle cx="256" cy="256" r="15" fill="#00ff00"/>
+
+  <!-- Hour markers -->
+  <circle cx="256" cy="76" r="8" fill="#00ff00"/>
+  <circle cx="436" cy="256" r="8" fill="#00ff00"/>
+  <circle cx="256" cy="436" r="8" fill="#00ff00"/>
+  <circle cx="76" cy="256" r="8" fill="#00ff00"/>
+
+  <!-- Text -->
+  <text x="256" y="480" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+        fill="#00ff00" text-anchor="middle">TIMER</text>
+</svg>

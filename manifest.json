@@ -1,0 +1,62 @@
+{
+  "name": "Timer & Klocka - Stabsövning",
+  "short_name": "Timer",
+  "description": "Professionell timer och klocka för övningar med flera teman och visuella signaler",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#00ff00",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "15-minuters timer",
+      "short_name": "15 min",
+      "description": "Starta en 15-minuters nedräkningstimer",
+      "url": "./index.html?timer=15",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "30-minuters timer",
+      "short_name": "30 min",
+      "description": "Starta en 30-minuters nedräkningstimer",
+      "url": "./index.html?timer=30",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Klocka",
+      "short_name": "Klocka",
+      "description": "Visa fullskärmsklocka",
+      "url": "./index.html?mode=clock",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
