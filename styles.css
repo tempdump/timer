@@ -274,12 +274,18 @@ label:has(#show-date), label:has(#show-weekday) {
 
 .speed-btn {
     padding: 12px;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     border: 2px solid var(--border);
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s;
+}
+
+.speed-btn:hover {
+    background: var(--bg-primary);
+    border-color: var(--accent);
 }
 
 .speed-btn.active {
@@ -293,6 +299,7 @@ label:has(#show-date), label:has(#show-weekday) {
     font-size: 0.75rem;
     margin-top: 4px;
     opacity: 0.8;
+    color: inherit;
 }
 
 .speed-explanation {
@@ -352,10 +359,16 @@ label:has(#show-date), label:has(#show-weekday) {
     height: 50px;
     border-radius: 50%;
     border: 2px solid var(--border);
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+.preset-btn:hover {
+    background: var(--bg-primary);
+    border-color: var(--accent);
 }
 
 .preset-btn.selected {
