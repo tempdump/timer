@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main page -->
+  <url>
+    <loc>https://mackan.eu/timer/</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Language alternatives -->
+    <xhtml:link rel="alternate" hreflang="sv" href="https://mackan.eu/timer/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mackan.eu/timer/?lang=en" />
+
+    <!-- Images -->
+    <image:image>
+      <image:loc>https://mackan.eu/timer/og-image.png</image:loc>
+      <image:title>Timer & Klocka - Online Timer</image:title>
+      <image:caption>Professionell online timer med 8 teman</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Features documentation -->
+  <url>
+    <loc>https://mackan.eu/timer/FEATURES.md</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

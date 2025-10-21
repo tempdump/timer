@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionell timer och klocka för övningar med flera teman och visuella signaler">
+
+    <!-- Primary Meta Tags -->
+    <title>Timer & Klocka Online - Professionell Nedräkningstimer med Fullskärm | Gratis</title>
+    <meta name="title" content="Timer & Klocka Online - Professionell Nedräkningstimer med Fullskärm | Gratis">
+    <meta name="description" content="Professionell online timer och klocka med 8 teman, fullskärmsläge, ljud och offline-stöd. Perfekt för övningar, presentationer och stabsövningar. Fungerar utan internet. 100% gratis.">
+    <meta name="keywords" content="timer online, nedräkningstimer, klocka online, fullskärm timer, övningstimer, stabsövning, presentation timer, offline timer, PWA timer, countdown timer, stoppur online">
+    <meta name="author" content="mackan.eu">
     <meta name="theme-color" content="#00ff00">
-    <title>Timer & Klocka</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mackan.eu/timer/">
+
+    <!-- Language Alternatives -->
+    <link rel="alternate" hreflang="sv" href="https://mackan.eu/timer/">
+    <link rel="alternate" hreflang="en" href="https://mackan.eu/timer/?lang=en">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mackan.eu/timer/">
+    <meta property="og:title" content="Timer & Klocka Online - Professionell Nedräkningstimer">
+    <meta property="og:description" content="Professionell timer med 8 teman, fullskärm och offline-stöd. Perfekt för övningar och presentationer. 100% gratis, ingen reklam.">
+    <meta property="og:image" content="https://mackan.eu/timer/og-image.png">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mackan.eu/timer/">
+    <meta property="twitter:title" content="Timer & Klocka Online - Professionell Nedräkningstimer">
+    <meta property="twitter:description" content="Professionell timer med 8 teman, fullskärm och offline-stöd. Perfekt för övningar och presentationer.">
+    <meta property="twitter:image" content="https://mackan.eu/timer/twitter-image.png">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -17,6 +45,103 @@
     <!-- PQINA Flip Library -->
     <link href="https://cdn.jsdelivr.net/npm/@pqina/flip@1.7.2/dist/flip.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@pqina/flip@1.7.2/dist/flip.min.js"></script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Timer & Klocka",
+      "alternateName": "Online Timer",
+      "url": "https://mackan.eu/timer/",
+      "description": "Professionell online timer och klocka med 8 teman, fullskärmsläge, ljud och offline-stöd. Perfekt för övningar, presentationer och stabsövningar.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "browserRequirements": "Requires JavaScript. Modern browser recommended.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SEK",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "8 professionella teman (Digital, Analog, Taktisk, LED, Nixie, LCD, Split-flap, 7-segment)",
+        "Fullskärmsläge för presentationer",
+        "Offline-stöd via PWA",
+        "Ljud och visuella varningar",
+        "Touch-gester för mobil",
+        "Tillgänglighetsanpassad (WCAG 2.1)",
+        "Keyboard shortcuts",
+        "Wake Lock API - håller skärmen påslagen",
+        "Tidsmanipulation (0.5x - 60x hastighet)",
+        "Stöd för övningsdetaljer och förberedelsefas"
+      ],
+      "screenshot": "https://mackan.eu/timer/screenshot-wide.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "mackan.eu"
+      },
+      "inLanguage": ["sv", "en"],
+      "softwareVersion": "1.1.0",
+      "datePublished": "2025-10-21",
+      "dateModified": "2025-10-21"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Fungerar timern offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja! Timer & Klocka är en PWA (Progressive Web App) med full offline-support. Efter första besöket fungerar timern utan internetanslutning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilka teman finns tillgängliga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det finns 8 professionella teman: Digital Standard, Analog Station, 7-segment Retro, Taktisk, Nixie-rör, LCD, Split-flap och LED 7-segment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jag använda timern i fullskärm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja! Tryck på 'Starta i fullskärm' eller använd tangentbordsgenvägen 'F'. Timern har även pseudo-fullskärm som fallback."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kostar timern något?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej, Timer & Klocka är 100% gratis att använda. Ingen reklam, ingen registrering, inga dolda kostnader."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilka tangentbordsgenvägar finns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Space = Pausa/återuppta, R = Återställ, F = Fullskärm, T = Byt tema, M = Ljud på/av, +/- = Justera tid (1 min), Shift+/- = Justera tid (10 min), 1-5 = Ladda presets."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div id="app">
@@ -407,7 +532,56 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- SEO Content Section -->
+            <section class="seo-content" style="margin-top: 40px; padding: 20px; background: var(--bg-secondary); border-radius: 8px; display: none;" id="seo-content">
+                <button onclick="document.getElementById('seo-content').style.display='none'" style="float: right; background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--text-secondary);">&times;</button>
+
+                <h2 style="margin-bottom: 15px; color: var(--text-primary);">Om Timer & Klocka</h2>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
+                    <strong>Timer & Klocka</strong> är en kraftfull och professionell <strong>online timer</strong> och
+                    <strong>digital klocka</strong> utvecklad för övningar, presentationer och professionellt bruk.
+                    Med fullskärmsläge, offline-stöd och 8 unika visuella teman är detta den mest avancerade
+                    <strong>nedräkningstimern</strong> som finns tillgänglig gratis online.
+                </p>
+
+                <h2 style="margin-bottom: 15px; margin-top: 30px; color: var(--text-primary);">Huvudfunktioner</h2>
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px;">
+                    8 professionella teman · Fullskärmsläge · Offline-stöd (PWA) · Ljud och visuella varningar · Touch-gester · Tangentbordsgenvägar · Tillgänglighetsanpassad (WCAG 2.1) · Wake Lock API · Tidsmanipulation (0.5x - 60x) · Övningsspecifika funktioner
+                </p>
+
+                <details style="margin-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: bold; padding: 10px; background: var(--bg-primary); border-radius: 4px; margin-bottom: 10px;">Perfekt för stabsövningar, presentationer och träning</summary>
+                    <p style="padding: 10px; line-height: 1.6; color: var(--text-secondary);">
+                        Timern är idealisk för stabsövningar och militära övningar med taktiskt tema, presentationer och föreläsningar med fullskärmsläge, intervallträning med ljud och visuella signaler, möten och workshops, undervisning och examination, samt event och produktion.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: bold; padding: 10px; background: var(--bg-primary); border-radius: 4px; margin-bottom: 10px;">Fungerar timern offline?</summary>
+                    <p style="padding: 10px; line-height: 1.6; color: var(--text-secondary);">
+                        Ja! Timer & Klocka är en PWA (Progressive Web App) med full offline-support. Efter ditt första besök fungerar timern perfekt utan internetanslutning. Du kan även installera den som en app.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: bold; padding: 10px; background: var(--bg-primary); border-radius: 4px; margin-bottom: 10px;">Vilka tangentbordsgenvägar finns?</summary>
+                    <p style="padding: 10px; line-height: 1.6; color: var(--text-secondary); font-family: monospace;">
+                        Space = Pausa/återuppta · R = Återställ · F = Fullskärm · T = Byt tema · M = Ljud på/av · +/- = Justera ±1 min · Shift+/- = Justera ±10 min · Shift+S = Spara preset · 1-5 = Ladda preset
+                    </p>
+                </details>
+
+                <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-secondary); font-size: 0.85rem;">
+                    100% gratis · Ingen reklam · Open source · Privacy-first
+                </footer>
+            </section>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <button onclick="document.getElementById('seo-content').style.display='block'" class="btn-secondary" style="font-size: 0.9rem;">
+                    ℹ️ Mer information & FAQ
+                </button>
+            </div>
+
             <!-- Download button outside preview -->
             <div class="download-section">
                 <button id="download-offline" class="download-offline-btn" data-i18n="download-offline">

@@ -1,0 +1,14 @@
+# robots.txt for https://mackan.eu/timer/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mackan.eu/timer/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
+
+# Disallow service worker and config files
+Disallow: /sw.js
+Disallow: /manifest.json
