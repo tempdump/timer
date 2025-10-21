@@ -185,34 +185,113 @@ class ThemeManager {
     applyTactical() {
         const displayContent = document.getElementById('display-content');
         displayContent.classList.add('theme-tactical');
-        
+
         const style = document.createElement('style');
         style.id = 'theme-style';
         style.textContent = `
             .display-panel {
-                background: #2a2a2a !important;
+                background: linear-gradient(180deg, #1a1f1a 0%, #0d120d 100%) !important;
             }
+
             .theme-tactical .timer-display,
             .theme-tactical .clock-display {
                 font-family: 'Courier New', monospace;
-                font-weight: bold;
-                color: #ff6600 !important;
+                font-weight: 900;
+                color: #00ff00 !important;
                 background: none;
                 padding: 0;
                 border: none;
                 text-transform: uppercase;
-                letter-spacing: 0.2em;
+                letter-spacing: 0.15em;
+                text-shadow:
+                    0 0 5px rgba(0,255,0,0.8),
+                    0 0 10px rgba(0,255,0,0.6),
+                    0 0 15px rgba(0,255,0,0.4),
+                    2px 2px 0px rgba(0,0,0,0.8);
+                filter: contrast(1.2);
             }
+
             .theme-tactical .clock-date {
-                color: #ff6600 !important;
+                color: #00ff00 !important;
+                text-shadow:
+                    0 0 5px rgba(0,255,0,0.6),
+                    0 0 10px rgba(0,255,0,0.4);
             }
-            
+
+            /* Tactical grid overlay */
+            .theme-tactical .display-content::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image:
+                    linear-gradient(rgba(0,255,0,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,255,0,0.03) 1px, transparent 1px);
+                background-size: 50px 50px;
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            /* Tactical corner brackets */
+            .theme-tactical .display-content::after {
+                content: '';
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                right: 5%;
+                bottom: 5%;
+                border: 2px solid rgba(0,255,0,0.3);
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            /* Corner indicators */
+            .theme-tactical .timer-display::before,
+            .theme-tactical .clock-display::before {
+                content: '▶';
+                position: absolute;
+                left: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #00ff00;
+                font-size: 0.3em;
+                opacity: 0.6;
+                animation: tactical-blink 2s infinite;
+            }
+
+            .theme-tactical .timer-display::after,
+            .theme-tactical .clock-display::after {
+                content: '◀';
+                position: absolute;
+                right: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #00ff00;
+                font-size: 0.3em;
+                opacity: 0.6;
+                animation: tactical-blink 2s infinite;
+            }
+
+            @keyframes tactical-blink {
+                0%, 49%, 100% { opacity: 0.6; }
+                50%, 99% { opacity: 0.2; }
+            }
+
             /* Mobile responsive adjustments for Tactical */
             @media (max-width: 768px) {
                 .theme-tactical .timer-display,
                 .theme-tactical .clock-display {
                     font-size: clamp(2rem, 8vw, 4rem) !important;
                     letter-spacing: 0.1em !important;
+                }
+
+                .theme-tactical .timer-display::before,
+                .theme-tactical .timer-display::after,
+                .theme-tactical .clock-display::before,
+                .theme-tactical .clock-display::after {
+                    display: none;
                 }
             }
         `;
@@ -222,25 +301,50 @@ class ThemeManager {
     applyNixie() {
         const displayContent = document.getElementById('display-content');
         displayContent.classList.add('theme-nixie');
-        
+
         const style = document.createElement('style');
         style.id = 'theme-style';
         style.textContent = `
+            .display-panel {
+                background: radial-gradient(ellipse at center, #1a0a0a 0%, #0a0000 100%) !important;
+            }
+
             .theme-nixie .timer-display,
             .theme-nixie .clock-display {
-                font-family: Georgia, serif;
-                background: linear-gradient(180deg, #1a0a0a 0%, #2a1515 100%);
-                color: #ff9955;
-                padding: 40px 60px;
-                border-radius: 20px;
-                box-shadow: 
-                    inset 0 0 60px rgba(255,150,85,0.2),
-                    0 0 40px rgba(255,150,85,0.1);
-                text-shadow: 
-                    0 0 20px rgba(255,150,85,0.8),
-                    0 0 40px rgba(255,150,85,0.6),
-                    0 0 60px rgba(255,150,85,0.4);
-                letter-spacing: 0.3em;
+                font-family: 'Courier New', monospace;
+                color: #ff9966 !important;
+                background: none;
+                padding: 0;
+                border: none;
+                text-shadow:
+                    0 0 10px rgba(255,153,102,1),
+                    0 0 20px rgba(255,153,102,0.9),
+                    0 0 30px rgba(255,153,102,0.8),
+                    0 0 40px rgba(255,120,60,0.7),
+                    0 0 60px rgba(255,100,40,0.6),
+                    0 0 80px rgba(255,80,20,0.5);
+                letter-spacing: 0.1em;
+                filter: brightness(1.2);
+            }
+
+            .theme-nixie .clock-date {
+                color: #ff9966 !important;
+                text-shadow:
+                    0 0 10px rgba(255,153,102,0.8),
+                    0 0 20px rgba(255,153,102,0.6);
+            }
+
+            /* Subtle vignette effect for tube feel */
+            .theme-nixie .display-content::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.6) 100%);
+                pointer-events: none;
+                z-index: -1;
             }
         `;
         document.head.appendChild(style);
