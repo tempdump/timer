@@ -158,25 +158,58 @@ class ThemeManager {
     applyDigitalRetro() {
         const displayContent = document.getElementById('display-content');
         displayContent.classList.add('theme-digital-retro');
-        
+
         const style = document.createElement('style');
         style.id = 'theme-style';
         style.textContent = `
             .display-panel {
-                background: #1a1a1a !important;
+                background: #0a0a0a !important;
             }
             .theme-digital-retro .timer-display,
             .theme-digital-retro .clock-display {
                 font-family: 'Courier New', monospace;
+                font-weight: bold;
                 color: #00ff00 !important;
-                text-shadow: 0 0 10px rgba(0,255,0,0.5);
-                background: none;
-                padding: 0;
-                border-radius: 0;
-                box-shadow: none;
+                background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+                padding: 40px 60px;
+                border-radius: 20px;
+                border: 3px solid #003300;
+                box-shadow:
+                    0 0 30px rgba(0,255,0,0.3),
+                    inset 0 0 60px rgba(0,255,0,0.1);
+                text-shadow:
+                    0 0 10px rgba(0,255,0,1),
+                    0 0 20px rgba(0,255,0,0.8),
+                    0 0 30px rgba(0,255,0,0.6),
+                    0 0 40px rgba(0,255,0,0.4);
+                letter-spacing: 0.1em;
             }
             .theme-digital-retro .clock-date {
                 color: #00ff00 !important;
+                text-shadow: 0 0 10px rgba(0,255,0,0.8);
+            }
+
+            /* Retro CRT scan line effect */
+            .theme-digital-retro .timer-display::before,
+            .theme-digital-retro .clock-display::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    transparent 50%,
+                    rgba(0,0,0,0.1) 50%
+                );
+                background-size: 100% 4px;
+                pointer-events: none;
+                animation: scanline 8s linear infinite;
+            }
+
+            @keyframes scanline {
+                0% { background-position: 0 0; }
+                100% { background-position: 0 100%; }
             }
         `;
         document.head.appendChild(style);

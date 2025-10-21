@@ -183,14 +183,34 @@ class App {
         this.timer.onUpdate = (time) => {
             const timerElement = document.getElementById('timer-time');
             const timerDisplay = document.getElementById('timer-display');
-            
+
             timerElement.textContent = time.formatted;
-            
+
             // Set data attribute for LCD background pattern
             if (timerDisplay) {
                 timerDisplay.setAttribute('data-hide-hours', time.hideHours ? 'true' : 'false');
             }
-            
+
+            // Apply color-coded warnings (only for countdown timer)
+            if (this.timer.direction === 'down' && timerDisplay) {
+                const totalSeconds = time.hours * 3600 + time.minutes * 60 + time.seconds;
+
+                // Remove all status classes first
+                timerDisplay.classList.remove('status-green', 'status-yellow', 'status-red');
+
+                // Apply appropriate status class based on remaining time
+                if (totalSeconds <= 60) {
+                    // Red: 1 minute or less
+                    timerDisplay.classList.add('status-red');
+                } else if (totalSeconds <= 300) {
+                    // Yellow: 5 minutes or less (but more than 1 minute)
+                    timerDisplay.classList.add('status-yellow');
+                } else {
+                    // Green: more than 5 minutes
+                    timerDisplay.classList.add('status-green');
+                }
+            }
+
             if (themeManager.currentTheme === 'analog-station') {
                 themeManager.updateAnalogClock(time);
             } else if (themeManager.currentTheme === 'split-flap') {
@@ -198,19 +218,19 @@ class App {
             } else if (themeManager.currentTheme === 'led-segment') {
                 themeManager.update7SegmentDisplay(time);
             }
-            
+
             // Update progress display if enabled
             if (this.isFullscreen) {
                 const totalTime = this.timer.targetTime;
                 const elapsedTime = this.timer.elapsedTime;
                 let progress = 0;
-                
+
                 if (this.timer.direction === 'down') {
                     progress = 1 - (elapsedTime / totalTime);
                 } else {
                     progress = elapsedTime / totalTime;
                 }
-                
+
                 this.updateProgressDisplay(Math.max(0, Math.min(1, progress)));
             }
         };
@@ -467,14 +487,17 @@ class App {
                 document.getElementById('clock-display').classList.add('hidden');
                 document.getElementById('analog-clock').classList.add('hidden');
                 document.getElementById('flip-clock').classList.remove('hidden');
+            } else if (themeManager.currentTheme === 'analog-station') {
+                // For analog station, show analog clock and hide timer display
+                document.getElementById('timer-display').classList.add('hidden');
+                document.getElementById('clock-display').classList.add('hidden');
+                document.getElementById('flip-clock').classList.add('hidden');
+                document.getElementById('analog-clock').classList.remove('hidden');
             } else {
                 document.getElementById('timer-display').classList.remove('hidden');
                 document.getElementById('clock-display').classList.add('hidden');
                 document.getElementById('flip-clock').classList.add('hidden');
-                
-                if (themeManager.currentTheme !== 'analog-station') {
-                    document.getElementById('analog-clock').classList.add('hidden');
-                }
+                document.getElementById('analog-clock').classList.add('hidden');
             }
             
             // Setup progress display
