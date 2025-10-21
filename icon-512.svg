@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background with subtle gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <radialGradient id="glowGrad">
+      <stop offset="0%" stop-color="#00ff00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00ff00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="85" fill="url(#bgGrad)"/>
+
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="200" fill="url(#glowGrad)"/>
+
+  <!-- Outer circle -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#00ff00" stroke-width="20"/>
+
+  <!-- Hour markers (12 positions) -->
+  <g fill="#00ff00">
+    <circle cx="256" cy="91" r="10"/>
+    <circle cx="350" cy="116" r="8"/>
+    <circle cx="421" cy="191" r="8"/>
+    <circle cx="421" cy="321" r="8"/>
+    <circle cx="350" cy="396" r="8"/>
+    <circle cx="256" cy="421" r="10"/>
+    <circle cx="162" cy="396" r="8"/>
+    <circle cx="91" cy="321" r="8"/>
+    <circle cx="91" cy="191" r="8"/>
+    <circle cx="162" cy="116" r="8"/>
+  </g>
+
+  <!-- Minute markers (small dots every 5 minutes) -->
+  <g fill="#00ff00" opacity="0.5">
+    <circle cx="290" cy="97" r="4"/>
+    <circle cx="324" cy="103" r="4"/>
+    <circle cx="409" cy="188" r="4"/>
+    <circle cx="415" cy="222" r="4"/>
+    <circle cx="415" cy="290" r="4"/>
+    <circle cx="409" cy="324" r="4"/>
+    <circle cx="324" cy="409" r="4"/>
+    <circle cx="290" cy="415" r="4"/>
+    <circle cx="222" cy="415" r="4"/>
+    <circle cx="188" cy="409" r="4"/>
+    <circle cx="103" cy="324" r="4"/>
+    <circle cx="97" cy="290" r="4"/>
+    <circle cx="97" cy="222" r="4"/>
+    <circle cx="103" cy="188" r="4"/>
+    <circle cx="188" cy="103" r="4"/>
+    <circle cx="222" cy="97" r="4"/>
+  </g>
+
+  <!-- Clock hands pointing to 10:10 -->
+  <!-- Hour hand -->
+  <line x1="256" y1="256" x2="256" y2="140" stroke="#00ff00" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Minute hand -->
+  <line x1="256" y1="256" x2="340" y2="256" stroke="#00ff00" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Center circle -->
+  <circle cx="256" cy="256" r="18" fill="#00ff00"/>
+
+  <!-- Inner shadow for depth -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#000" stroke-width="4" opacity="0.3"/>
+</svg>

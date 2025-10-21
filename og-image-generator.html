@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator - Timer & Klocka</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .instructions {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .og-image {
+            width: 1200px;
+            height: 630px;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .og-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .og-logo {
+            font-size: 120px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px rgba(0,255,0,0.5));
+        }
+
+        .og-title {
+            font-size: 72px;
+            font-weight: 900;
+            color: #00ff00;
+            text-shadow: 0 0 40px rgba(0,255,0,0.8);
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .og-subtitle {
+            font-size: 36px;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .og-features {
+            display: flex;
+            gap: 30px;
+            font-size: 24px;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        .og-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .og-feature::before {
+            content: '✓';
+            color: #00ff00;
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        .og-footer {
+            font-size: 28px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .og-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,255,0,0.15) 0%, transparent 70%);
+        }
+
+        .accent-1 {
+            top: -100px;
+            left: -100px;
+        }
+
+        .accent-2 {
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .twitter-image {
+            width: 1200px;
+            height: 675px;
+            margin: 20px auto;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .download-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            max-width: 300px;
+        }
+
+        .download-btn:hover {
+            background: #00dd00;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Open Graph & Twitter Card Image Generator</h1>
+        <p><strong>Instruktioner:</strong></p>
+        <ol>
+            <li>Ta en screenshot av bilderna nedan (1200x630 och 1200x675)</li>
+            <li>Alternativt: Högerklicka → "Inspektera" → Ta screenshot från DevTools</li>
+            <li>Alternativt: Använd browser extension för att ta exakt storlek</li>
+            <li>Spara som <code>og-image.png</code> och <code>twitter-image.png</code></li>
+            <li>Ladda upp till <code>~/public_html/timer/</code></li>
+        </ol>
+        <p><strong>Tips:</strong> Använd Chrome DevTools Device Toolbar för exakt storlek.</p>
+    </div>
+
+    <h2 style="text-align: center; margin: 40px 0 20px;">Open Graph Image (1200x630)</h2>
+    <div class="og-image" id="og-image">
+        <div class="og-accent accent-1"></div>
+        <div class="og-accent accent-2"></div>
+
+        <div class="og-content">
+            <div class="og-logo">⏱️</div>
+            <div class="og-title">Timer & Klocka</div>
+            <div class="og-subtitle">Professionell Online Timer</div>
+
+            <div class="og-features">
+                <div class="og-feature">8 Teman</div>
+                <div class="og-feature">Fullskärm</div>
+                <div class="og-feature">Offline</div>
+                <div class="og-feature">Gratis</div>
+            </div>
+
+            <div class="og-footer">mackan.eu/timer</div>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin: 40px 0 20px;">Twitter Card Image (1200x675)</h2>
+    <div class="twitter-image" id="twitter-image">
+        <div class="og-accent accent-1"></div>
+        <div class="og-accent accent-2"></div>
+
+        <div class="og-content">
+            <div class="og-logo">⏱️</div>
+            <div class="og-title">Timer & Klocka</div>
+            <div class="og-subtitle">Professionell Online Timer med 8 Teman</div>
+
+            <div class="og-features">
+                <div class="og-feature">Fullskärm</div>
+                <div class="og-feature">Offline-stöd</div>
+                <div class="og-feature">PWA</div>
+            </div>
+
+            <div class="og-footer">100% Gratis · Ingen Reklam · Open Source</div>
+        </div>
+    </div>
+
+    <script>
+        // Automatically try to download as canvas (optional)
+        console.log('OG Image Generator loaded. Take screenshots of the images above.');
+        console.log('Recommended: Use Chrome DevTools Device Mode for exact sizing.');
+    </script>
+</body>
+</html>
